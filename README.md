@@ -16,3 +16,32 @@ Small Monte Carlo simulation that shows two versions of the Monty Hall game:
 Just run `monty_hall_demo`.
 
 The script plots the running (cumulative) success rates.
+<br><br>
+## Note:
+
+By Bayes' theorem, the conditional probability formulas are the same, but since the randomized host is not guarantedd to reveal a goat $(\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door})$ and $\mathrm{P}(\text{goat reveal})$ are not $1)$ the probabilities shift:
+
+1) In case of the standard host:
+
+```math
+\begin{aligned}
+&\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door}) = 1 \\
+&\mathrm{P}(\text{car not behind your door}) = \frac{2}{3} \\
+&\mathrm{P}(\text{goat reveal}) = 1 \\
+\\
+&\mathrm{P}(\text{car not behind your door} \mid \text{goat reveal}) = \frac{\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door}) \cdot \mathrm{P}(\text{car not behind your door})}{\mathrm{P}(\text{goat reveal})} = \frac{1 \cdot (2/3)}{1} = \frac{2}{3}
+\end{aligned}
+```
+<br>
+
+2) In case of the random host: 
+
+```math
+\begin{aligned}
+&\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door}) = \frac{1}{2} \\
+&\mathrm{P}(\text{car not behind your door}) = \frac{2}{3} \\
+&\mathrm{P}(\text{goat reveal}) = \frac{2}{3} \\
+\\
+&\mathrm{P}(\text{car not behind your door} \mid \text{goat reveal}) = \frac{\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door}) \cdot \mathrm{P}(\text{car not behind your door})}{\mathrm{P}(\text{goat reveal})} = \frac{(1/2) \cdot (2/3)}{(2/3)} = \frac{1}{2}
+\end{aligned}
+```
