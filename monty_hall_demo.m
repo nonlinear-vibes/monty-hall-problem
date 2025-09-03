@@ -69,7 +69,7 @@ while v < N
         elseif doors(closed_door) == 1
             win_switch_R(v) = 1;
         end
-        v = v+1;
+        v = v + 1;
     end
 
 end
