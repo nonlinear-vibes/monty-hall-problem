@@ -29,11 +29,11 @@ for j = 1:N
     closed_door = setdiff(1:3, [your_pick open_door]);
 
     if doors(your_pick) == 1 % you stick to your initial pick
-        win_switch(j) = 1;
+        win_stay(j) = 1;
     end
     your_pick = closed_door; % you switch doors
     if doors(your_pick) == 1
-        win_stay(j) = 1;
+        win_switch(j) = 1;
     end
 end
 
@@ -84,7 +84,7 @@ subplot(2,1,1); hold on; grid on; box on;
 plot(1:N, win_ratio_switch, '-', 'LineWidth', 1.3);
 plot(1:N, win_ratio_stay,   '-', 'LineWidth', 1.3);
 yline(2/3, '--'); yline(1/3, '--');
-legend('Switch (MC)','Stay (MC)', 'Location','northeast');
+legend('Switch','Stay', 'Location','northeast');
 title('A) Standard host (always reveals a goat)');
 xlabel('Rounds'); ylabel('Success probability');
 
@@ -93,6 +93,6 @@ subplot(2,1,2); hold on; grid on; box on;
 plot(1:N, win_ratio_switch_R, '-', 'LineWidth', 1.3);
 plot(1:N, win_ratio_stay_R,   '-', 'LineWidth', 1.3);
 yline(1/2, '--');
-legend('Switch (MC)','Stay (MC)', 'Location','northeast');
+legend('Switch','Stay', 'Location','northeast');
 title('B) Random host (conditioned on goat reveal)');
 xlabel('Valid rounds'); ylabel('Success probability');
