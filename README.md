@@ -21,7 +21,7 @@ The script plots the running (cumulative) success rates.
 
 By Bayes' theorem, the conditional probability formulas are the same, but since the randomized host is not guarantedd to reveal a goat $(\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door})$ and $\mathrm{P}(\text{goat reveal})$ are not $1)$ the probabilities shift:
 
-1) In case of the standard host:
+**1) In case of the standard host:**
 
 ```math
 \begin{aligned}
@@ -34,7 +34,7 @@ By Bayes' theorem, the conditional probability formulas are the same, but since 
 ```
 <br>
 
-2) In case of the random host: 
+**2) In case of the random host:**
 
 ```math
 \begin{aligned}
