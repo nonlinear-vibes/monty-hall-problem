@@ -3,7 +3,7 @@
 Small Monte Carlo simulation that shows two versions of the Monty Hall game:
 
 1) **Standard host (textbook Monty Hall)**: the host always opens a door with a goat and then offers a switch.
-    In this case, the host’s behavior is informative (he avoids the car). Switching wins with probability **2/3**; staying wins with **1/3**.
+    In this case, the host’s behaviour is informative (he avoids the car). Switching wins with probability **2/3**; staying wins with **1/3**.
 
 3) **Random host (conditioned on a goat reveal)**: the host randomly opens one of the other two doors.
     In this case, the goat reveal happened only by chance. Switching and staying both win with probability **1/2**.
@@ -19,7 +19,7 @@ The script plots the running (cumulative) success rates.
 <br><br>
 ## Note:
 
-By Bayes' theorem, the conditional probability formulas are the same, but since the randomized host is not guarantedd to reveal a goat $(\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door})$ and $\mathrm{P}(\text{goat reveal})$ are not $1)$ the probabilities shift:
+By Bayes' theorem, the conditional probability formulas are the same, but since the randomized host is not guaranteed to reveal a goat $(\mathrm{P}(\text{goat reveal} \mid \text{car not behind your door})$ and $\mathrm{P}(\text{goat reveal})$ are not $1)$ the probabilities shift:
 
 **1) In case of the standard host:**
 
